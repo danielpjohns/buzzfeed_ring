@@ -6,305 +6,61 @@
     <title>Article title</title>
     <link rel="icon" href="https://i.imgur.com/zchmfya.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.1.0/css/all.css">
+    <link rel="stylesheet" href="style.css">
     
-    <style>
-/* Base styles */
-body, html {
-    background-color: #ffffff;
-    font-family: helvetica, sans-serif;
-}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script src="https://static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
+    <script>
+    (function($){
+    $(document).ready(function(){
+    $("[title]").style_my_tooltips({
+    tip_follows_cursor:true,
+    tip_delay_time:90,
+    tip_fade_speed:600,
+    attribute:"title"
+    });
+    });
+    })(jQuery);
+    </script>
 
-/* Link colors */
-a {
-    text-decoration: none;
-    color: #256be6;
-}
+    <script src="https://code.jquery.com/jquery-1.10.0.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
 
-a:hover {
-    text-decoration: none;
-    color: #15408a;
-}
-
-b {
-    font-family: helvetica neue, sans-serif;
-}
-
-/* Top banner */
-#title {
-    position: fixed;
-    background-color: #fff;
-    top: 0;
-    left: 0;
-    width: 100%;
-    font-size: 12px;
-    color: #667785;
-    border-bottom: 1px solid #e1e8ed;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 5px;
-    padding-top: 4px;
-    z-index: 99999;
-}
-
-/* Main article container */
-#content {
-    position: absolute;
-    top: 100px;
-    left: 50%;
-    margin-left: -400px;
-    width: 800px;
-    background-color: #ffffff;
-}
-
-/* Header elements */
-#articletrend {
-    color: #777;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-family: arial;
-}
-
-#articleviews {
-    color: #de4433;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-family: arial;
-}
-
-#articletype {
-    color: #fff;
-    background-color: #777;
-    width: 80px;
-    text-align: center;
-    padding: 5px;
-    font-weight: 000;
-    font-size: 12px;
-    line-height: 16px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-family: helvetica neue;
-}
-
-#articletitle {
-    color: #000;
-    font-weight: 600;
-    font-size: 43px;
-    line-height: 43px;
-    letter-spacing: 2px;
-    text-transform: none;
-    font-family: helvetica neue;
-    padding-top: 20px;
-}
-
-#articlesubtitle {
-    color: #000;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 25px;
-    letter-spacing: 1px;
-    text-transform: none;
-    font-family: helvetica neue;
-    padding-top: 20px;
-}
-
-#articledate {
-    color: #777;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 12px;
-    letter-spacing: .5px;
-    text-transform: none;
-    font-family: helvetica neue;
-    padding-top: 10px;
-}
-
-#authorname {
-    color: #777;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 16px;
-    letter-spacing: 1px;
-    text-transform: none;
-    font-family: arial;
-}
-
-#authortitle {
-    color: #777;
-    font-weight: none;
-    font-size: 13px;
-    line-height: 16px;
-    letter-spacing: 1px;
-    text-transform: none;
-    font-family: arial;
-}
-
-#commentbutton {
-    color: #777;
-    border: 1px solid #eee;
-    padding: 17px;
-    border-radius: 40px;
-    width: 230px;
-    text-align: center;
-    font-weight: none;
-    font-size: 16px;
-    line-height: 16px;
-    letter-spacing: 1px;
-    text-transform: none;
-    font-weight: 500;
-    font-family: helvetica neue;
-}
-
-#articlecontent {
-    margin-top: 20px;
-    font-family: helvetica neue;
-    font-size: 27px;
-    line-height: 29px;
-    font-weight: 500;
-    letter-spacing: .5px;
-}
-
-#articleend {
-    margin-top: 20px;
-    font-family: helvetica neue;
-    font-size: 30px;
-    line-height: 31px;
-    font-weight: 500;
-    letter-spacing: .5px;
-}
-
-/* Tweet styles */
-#tweet {
-    margin-top: 20px;
-    width: 480px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    font-size: 16px;
-    font-family: helvetica neue;
-    font-weight: 400;
-}
-
-#tweetname {
-    width: 480px;
-    padding: 10px;
-    border: 1px solid #eee;
-    border-radius: 20px;
-    font-size: 16px;
-    font-family: helvetica neue;
-    font-weight: 400;
-}
-
-#tweetreplyto {
-    font-size: 14px;
-    color: #777;
-    font-family: helvetica neue;
-    font-weight: 400;
-}
-
-#tweetinfo {
-    font-size: 14px;
-    margin-top: 10px;
-    margin-bottom: -10px;
-    color: #777;
-    font-family: helvetica neue;
-    font-weight: 400;
-}
-
-#tweetpic {
-    width: 90%;
-    border-radius: 10px;
-}
-
-/* Instagram styles */
-#instagram {
-    width: 580px;
-    padding: 10px;
-    border-radius: 20px;
-    font-size: 16px;
-    font-family: helvetica neue;
-    font-weight: 400;
-}
-
-#instagrampic {
-    width: 40px;
-    height: 40px;
-    border: 2px solid #ddd;
-    padding: 2px;
-    border-radius: 100%;
-}
-
-#instagramname {
-    font-family: helvetica neue;
-    font-size: 14px;
-    font-weight: bold;
-    color: #000;
-    letter-spacing: .5px;
-}
-
-#instagramfollowers {
-    font-family: helvetica neue;
-    font-size: 12px;
-    color: #777;
-    letter-spacing: .5px;
-}
-
-#instagramfollow {
-    width: 80px;
-    text-align: center;
-    background-color: #4f99e8;
-    border-radius: 5px;
-    padding: 10px;
-    font-family: helvetica neue;
-    font-size: 15px;
-    color: #fff;
-    letter-spacing: .5px;
-}
-
-#instagramviewmore {
-    font-family: helvetica neue;
-    font-size: 16px;
-    font-weight: bold;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    color: #777;
-    letter-spacing: 1px;
-}
-
-#instagramlikes {
-    font-family: helvetica neue;
-    font-size: 14px;
-    font-weight: 500;
-    color: #000;
-    letter-spacing: 1px;
-}
-
-#instagramcomment {
-    font-family: helvetica neue;
-    font-size: 13px;
-    color: #777;
-    letter-spacing: 1px;
-}
-
-#instagrambreak {
-    width: 100%;
-    height: 1px;
-    background-color: #e1e8ed;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-    </style>
+    <script> 
+    $(document).ready(function() { 
+    $('a.poplight[href^=#]').click(function() { 
+    var popID = $(this).attr('rel');
+    var popURL = $(this).attr('href');
+    var query= popURL.split('?'); 
+    var dim= query[1].split('&'); 
+    var popWidth = dim[0].split('=')[1];
+    $('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close"><img src="https://icons.iconarchive.com/icons/saki/nuoveXT/16/Actions-file-close-icon.png" class="btn_close" title="close" alt="close" /></a>'); 
+    var popMargTop = ($('#' + popID).height() + 90) / 2; 
+    var popMargLeft = ($('#' + popID).width() + 90) / 2;
+    $('#' + popID).css({ 
+    'margin-top' : -popMargTop,
+    'margin-left' : -popMargLeft 
+    }); 
+    $('body').append('<div id="fade"></div>');
+    $('#fade').css({'filter' : 'alpha(opacity=80)'}).fadeIn();
+    return false; 
+    }); 
+    $('a.close, #fade').on('click', function() { 
+    $('#fade , .popup_block').fadeOut(function() { 
+    $('#fade, a.close').remove();
+    }); 
+    return false; 
+    }); 
+    }); 
+    </script>
 </head>
 <body>
 
 <!-- START OF TOP BANNER -->
 <div id="title">
-    <img src="https://i.imgur.com/R0MWMRM.png" style="width: 100%;">
+    <img src="https://i.imgur.com/R0MWMRM.png" style="float: center; width: 100%;">
 </div>
 <!-- END OF TOP BANNER -->
 
@@ -375,7 +131,7 @@ b {
 
         <br>
 
-        More article text goes here! Look how fun and easy this is. Include a sass or something.
+        More article text goes here! Look how fun and easy this is. Include a sass or something. I'll figure out IG code eventually too.
 
         <!-- IN ARTICLE TWEET 2 -->
         <div id="tweet">
