@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article title</title>
+    <link rel="icon" href="https://i.imgur.com/zchmfya.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.1.0/css/all.css">
+    <link rel="stylesheet" href="styles.css">
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script src="http://static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
+    <script>
+    (function($){
+    $(document).ready(function(){
+    $("[title]").style_my_tooltips({
+    tip_follows_cursor:true,
+    tip_delay_time:90,
+    tip_fade_speed:600,
+    attribute:"title"
+    });
+    });
+    })(jQuery);
+    </script>
+
+    <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+
+    <script> 
+    $(document).ready(function() { 
+    $('a.poplight[href^=#]').click(function() { 
+    var popID = $(this).attr('rel');
+    var popURL = $(this).attr('href');
+    var query= popURL.split('?'); 
+    var dim= query[1].split('&'); 
+    var popWidth = dim[0].split('=')[1];
+    $('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close"><img src="http://icons.iconarchive.com/icons/saki/nuoveXT/16/Actions-file-close-icon.png" class="btn_close" title="close" alt="close" /></a>'); 
+    var popMargTop = ($('#' + popID).height() + 90) / 2; 
+    var popMargLeft = ($('#' + popID).width() + 90) / 2;
+    $('#' + popID).css({ 
+    'margin-top' : -popMargTop,
+    'margin-left' : -popMargLeft 
+    }); 
+    $('body').append('<div id="fade"></div>');
+    $('#fade').css({'filter' : 'alpha(opacity=80)'}).fadeIn();
+    return false; 
+    }); 
+    $('a.close, #fade').live('click', function() { 
+    $('#fade , .popup_block').fadeOut(function() { 
+    $('#fade, a.close').remove();
+    }); 
+    return false; 
+    }); 
+    }); 
+    </script>
+</head>
+<body>
+
+<!-- START OF TOP BANNER -->
+<div id="title">
+    <img src="https://i.imgur.com/R0MWMRM.png" style="float: center; width: 100%;">
+</div>
+<!-- END OF TOP BANNER -->
+
+<!-- START OF MAIN CONTENT -->
+<div id="content">
+
+    <!-- START TRENDING AND VIEWS -->
+    <table><tr><td>
+        <img src="https://i.imgur.com/zchmfya.png" style="width: 50px;">
+    </td><td>
+        <div id="articletrend">trending</div>
+        <div id="articleviews">000,000 views</div>
+    </td></tr></table>
+    <!-- END TRENDING AND VIEWS -->
+
+    <!-- START ARTICLE TYPE -->
+    <div id="articletype" style="margin-top: 10px;">CELEBRITY</div>
+    <!-- END ARTICLE TYPE -->
+
+    <!-- START ARTICLE TITLE -->
+    <div id="articletitle">This is where the Buzzfeed Title goes. It's big. It's clickbaity.</div>
+    <div id="articlesubtitle">Here's the subtitle.</div>
+    <div id="articledate">Posted on January 00, 2020, at 5:45 p.m.</div>
+    <!-- END ARTICLE TITLE -->
+
+    <!-- START AUTHOR -->
+    <table style="padding-top: 15px;"><tr><td>
+        <img src="https://i.imgur.com/TmzIzLr.jpg" style="width: 50px; border-radius: 100%;">
+    </td><td>
+        <div id="authorname"><a href="">Author Name</a></div>
+        <div id="authortitle">Buzzfeed Staff</div>
+    </td></tr></table>
+    <!-- END AUTHOR -->
+
+    <!-- START COMMENTS AND SOCIALS -->
+    <table style="padding-top: 15px;"><tr><td style="width: 30%;">
+        <div id="commentbutton"><a href="">View 30 comments ↓</a></div>
+    </td><td style="width: 70%;"><div align="right"><img src="https://i.imgur.com/iVrfRNn.png" style="width: 240px;"></div>
+    </td></tr></table>
+    <!-- END COMMENTS AND SOCIALS -->
+
+    <!-- START ARTICLE CONTENT -->
+    <div id="articlecontent">
+
+        This is where content starts to go. Typically celeb stuff has big text because they're just reviewing tweets with some sass involved.
+
+        <!-- IN ARTICLE TWEET 1 -->
+        <div id="tweet">
+            <table style="width: 100%;"><tr>
+                <td style="width: 10%;"><img src="https://i.imgur.com/I4ZPFV5.png" style="width: 40px; border-radius: 100%;"></td>
+                <td style="width: 80%;">
+                    <b>Celebrity Name</b> <img src="https://i.imgur.com/rl2XOM8.png" width="12"><br>
+                    <small style="color: #777;">@username</small>
+                </td>
+                <td style="10%"><div align="right">
+                    <img src="https://i.imgur.com/zatUBNb.png" width="25">
+                </div></td>
+            </tr></table>
+            <div id="tweetreplyto">Replying to @username</div>
+
+            tweet here!
+
+            <div id="tweetinfo">
+                ♡ 1,836 12:25 PM - Jan 16, 2020
+            </div>
+        </div>
+        <!-- END IN ARTICLE TWEET 1 -->
+
+        <br>
+
+        More article text goes here! Look how fun and easy this is. Include a sass or something. I'll figure out IG code eventually too.
+
+        <!-- IN ARTICLE TWEET 2 -->
+        <div id="tweet">
+            <table style="width: 100%;"><tr>
+                <td style="width: 10%;"><img src="https://i.imgur.com/I4ZPFV5.png" style="width: 40px; border-radius: 100%;"></td>
+                <td style="width: 80%;">
+                    <b>Celebrity Name</b> <img src="https://i.imgur.com/rl2XOM8.png" width="12"><br>
+                    <small style="color: #777;">@username</small>
+                </td>
+                <td style="10%"><div align="right">
+                    <img src="https://i.imgur.com/zatUBNb.png" width="25">
+                </div></td>
+            </tr></table>
+
+            tweet here!
+
+            <center>
+                <img src="https://i.imgur.com/Z3ci1fI.png" style="width: 98%; border-radius: 10px; margin-top: 10px;">
+            </center>
+
+            <div id="tweetinfo">
+                ♡ 1,836 12:25 PM - Jan 16, 2020
+            </div>
+        </div>
+        <!-- END IN ARTICLE TWEET 2 -->
+        
+        <br>
+
+        Finally, here is an Instagram for looks. Buzzfeed coding is ugly af so I made this cuter than it is because who cares?
+
+        <br><br>
+
+        <!-- IN ARTICLE INSTAGRAM 1 -->
+        <div id="instagram">
+            <table style="width: 100%;"><tr>
+                <td style="width: 10%;"><div id="instagrampic" style="background: url(https://i.imgur.com/I4ZPFV5.png); background-size: 100%;"></div></td>
+                <td style="width: 80%;">
+                    <div id="instagramname">instausername <img src="http://i.imgur.com/1UjJbO2.png" width="12"></div>
+                    <div id="instagramfollowers">00.0m followers</div>
+                </td>
+                <td style="10%"><div align="right">
+                    <div id="instagramfollow">Follow</div>
+                </div></td>
+            </tr></table>
+
+            <center>
+                <img src="https://i.imgur.com/3bb6iGX.jpg" style="width: 100%; border-radius: 0px; margin-top: 10px;">
+            </center>
+
+            <div id="instagramviewmore">
+                <a href="">View More on Instagram</a>
+            </div>
+            <div id="instagrambreak"></div>
+            <center><img src="https://i.imgur.com/6YRy1Br.png" style="width: 100%;"></center>
+            <div id="instagramlikes">000,000,000 likes</div>
+            <div id="instagrambreak"></div>
+            <div id="instagramcomment">Add a comment...</div>
+        </div>
+        <!-- END IN ARTICLE INSTAGRAM 1 -->
+
+        <br>
+
+        Just some final text to show you how it looks and stuff. Isn't this fun? Usually it ends on a meme to break between the article! 
+
+        <br><br>
+
+        <img src="https://i.imgur.com/ymvRxCN.png" style="width: 70%; border-radius: 10px;">
+
+    </div>
+
+    <div id="articleend">
+        Share This Article
+        <br>
+        <img src="https://i.imgur.com/iVrfRNn.png" style="width: 240px; margin-top: 20px;">
+        <br><br>
+        <img src="https://i.imgur.com/TMYhipy.png" style="width: 100px; margin-bottom: 20px;">
+        <br>
+        More Like This
+    </div>
+    <!-- END ARTICLE CONTENT -->
+
+    <br><br><br><br><br><br>
+
+</div>
+<!-- END OF MAIN CONTENT -->
+
+</body>
+</html>
